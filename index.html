@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="input-group">
+        <label for="billInput">Bill Total</label>
+        <div class="input__container">
+          <span class="input__icon">$</span>
+          <input
+            type="text"
+            id="billInput"
+            placeholder="0.00"
+            onkeyup="calculateBill()"
+          />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="tipInput">Tip</label>
+        <div class="input__container">
+          <span class="input__icon">%</span>
+          <input
+            type="text"
+            id="tipInput"
+            placeholder="10"
+            onkeyup="calculateBill()"
+          />
+        </div>
+      </div>
+
+      <div class="flex-group">
+        <div class="col col-1">
+          <div class="col__heading">People</div>
+          <div class="btn-group">
+            <button class="btn" onclick="increasePeople()">+</button>
+            <p class="btn--output" id="numberOfPeopleDiv">1</p>
+            <button class="btn" onclick="decreasePeople()">-</button>
+          </div>
+        </div>
+        <div class="col col-2">
+          <div class="col__heading">Total per person</div>
+          <div class="output" id="perPersonTotalDiv">$0.00</div>
+        </div>
+      </div>
+    </main>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Created by Confidence -->
